@@ -1,0 +1,178 @@
+.team-feature {
+  text-align: left;
+}
+
+.team-feature__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.team-feature hr {
+  border: none;
+  border-top: 1px solid rgba(0, 39, 76, 0.15);
+  margin: 0 0 1rem;
+}
+
+.team-feature__label {
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  font-size: 1.2rem;
+  color: var(--maize);
+}
+
+.team-feature__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.team-feature__photo {
+  justify-self: end;
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius-md);
+  background: linear-gradient(140deg, rgba(0, 39, 76, 0.18), rgba(0, 39, 76, 0.04));
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start
+}
+
+.team-feature__content a {
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.team-feature__content a::after {
+  content: "→";
+  font-size: 1rem;
+}
+
+.team-category {
+  margin-bottom: 2rem;
+}
+
+.team-category h3 {
+  margin-bottom: 0.75rem;
+}
+
+/* Simple team member grid - no cards, just avatar + name */
+.team-simple-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem 2rem;
+}
+
+.team-simple {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: var(--blue);
+  transition: opacity 0.2s ease;
+}
+
+.team-simple:hover {
+  opacity: 0.75;
+}
+
+.team-simple__photo {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.team-simple__name {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--blue);
+}
+
+.team-grid {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.team-grid--pair {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.team-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  gap: 0.85rem;
+  align-items: center;
+}
+
+.team-card h4 {
+  font-size: 1.05rem;
+  color: var(--blue);
+  margin-bottom: 0.15rem;
+}
+
+.team-card__photo {
+  width: 86px;
+  height: 86px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(0, 39, 76, 0.15), rgba(0, 39, 76, 0.05));
+  flex-shrink: 0;
+}
+
+.team-card a {
+  font-weight: 600;
+}
+
+.team-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.openings__card {
+  width: 100%;
+  background: #fff;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line);
+  padding: 1.5rem 1.75rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.openings__text {
+  max-width: none;
+  color: var(--deep);
+}
+
+@media (max-width: 900px) {
+  .team-feature__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .team-feature__photo {
+    max-width: 260px;
+  }
+}
+
+@media (max-width: 720px) {
+  .team-grid--pair {
+    grid-template-columns: 1fr;
+  }
+
+  .team-simple-grid {
+    grid-template-columns: 1fr;
+  }
+}

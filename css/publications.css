@@ -1,0 +1,75 @@
+.scholar-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.scholar-link::after {
+  content: "↗";
+  font-size: 0.95rem;
+}
+
+.pub-list {
+  list-style: decimal;
+  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.pub-item {
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.pub-item__title a {
+  color: var(--blue);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.pub-item__title a:hover {
+  color: var(--maize);
+}
+
+.pub-item__title {
+  font-size: 1.05rem;
+  color: var(--blue);
+}
+
+.pub-item__authors {
+  color: var(--muted);
+  margin-top: 0.25rem;
+}
+
+.pub-item__venue {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: 0.3rem;
+  color: var(--deep);
+}
+
+.pub-item__year {
+  padding: 0.1rem 0.55rem;
+  border-radius: 999px;
+  background: rgba(0, 39, 76, 0.08);
+  color: var(--blue);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.pub-footnote {
+  margin-top: 1.25rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 640px) {
+  .pub-list {
+    padding-left: 1.1rem;
+  }
+}
